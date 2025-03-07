@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Control System</title>
+    <link rel="stylesheet" href="db.css">
+</head>
+<body>
+    <div class="container">
+        <h2><u>INVENTORY CONTROL SYSTEM</u></h2><br><br><hr>
+        
+        <!-- Form to add Computer Lab Inventory -->
+        <div class="form-section">
+            <h3>&diams; Computer Lab Inventory :</h3><br>
+            <form id="labForm" onsubmit="submitForm('computer_lab'); return false;">
+                <label for="lab-item">Item Name:</label>
+                <input type="text" id="lab-item" name="item_name" required>
+                <label for="lab-quantity" class="button">Quantity:</label>
+                <input type="number" id="lab-quantity" name="quantity" required>
+                <button type="submit" class="button">Add to Lab Inventory</button>
+            </form>
+        </div>
+        <br><br><br>
+        <!-- Form to add College Store Inventory -->
+        <div class="form-section">
+            <h3>&diams; College Store Inventory :</h3><br>
+            <form id="storeForm" onsubmit="submitForm('store'); return false;">
+                <label for="store-item">Item Name:</label>
+                <input type="text" id="store-item" name="item_name" required>
+                <label for="store-quantity" class="button">Quantity:</label>
+                <input type="number" id="store-quantity" name="quantity" required>
+                <button type="submit" class="button">Add to Store Inventory</button>
+            </form>
+        </div><br><br><br><br>
+
+        <!-- Button to show the tables -->
+        <center><div class="button-section">
+            <button onclick="showTables()" id="bsiz">Show Inventory Record</button>
+        </div></center><br><br><div id="cprgt">~ By Mukund (44) & Lucky (40)</div><hr><br>
+
+        <!-- Hidden Inventory Sections that only show on clicking the button -->
+        <div class="inventory-section" id="lab-inventory" style="display:none;">
+            <h2>Computer Lab Inventory</h2>
+            <table id="computer-lab-table">
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th>Last Updated</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data from the database will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="inventory-section" id="store-inventory" style="display:none;">
+            <h2>College Store Inventory</h2>
+            <table id="store-table">
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th>Last Updated</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data from the database will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="db.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+body {
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.inventory-section {
+    margin-bottom: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.button {
+    margin-left: 20px;
+}
+#bsiz {
+    height: 1.5cm;
+    width: 5cm;
+}
+.form-section {
+    margin-left: 30px;
+}
+#cprgt {
+    display: flex;
+    justify-content: end;
+}
